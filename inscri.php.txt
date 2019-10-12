@@ -1,0 +1,72 @@
+<?php
+
+if(isset($_GET["ins"]))
+						{
+							if(($_GET["cin"]=="") || ($_GET["passe"]=="") || ($_GET["nomc"]=="") || ($_GET["prenc"]=="") || ($_GET["numtel"]=="") || ($_GET["email"]==""))
+							{
+								echo "tout les champs sont obligatoires.";
+								
+							}
+							else 
+							{
+								$cin=$_GET["cin"];
+								$passe=$_GET["passe"];
+								$nomc=$_GET["nomc"];
+								$prenc=$_GET["prenc"];
+								$numtel=$_GET["numtel"];
+								$email=$_GET["email"];
+								
+								$resultats1=$bdd->query("SELECT * FROM client where cin='$cin'");
+								$resultats1->setFetchMode(PDO::FETCH_OBJ);
+								$array = $resultats1->fetchALL();
+								$nb = count($array);
+								if($nb==1) 
+								{
+									echo "Cin existant .";
+								}
+								else
+									if(strlen($cin)!=8)
+									{
+										echo "Cin Doit étre de 8 chiffres";
+										
+									}
+									else
+											if(strlen($passe)!=4)
+											{
+												echo"Le Mot de Passe doit étre de 4 caractéres";
+											}
+											
+										else
+											if(strlen($nomc)<3)
+											{
+												echo"Le champs Nom doit étre au moins de 3 caractéres";
+											}
+											
+											else
+											if(strlen($prenc)<3)
+											{
+												echo"Le champs Prenom doit étre au moins de 3 caractéres";
+											}	
+											else
+											if(strlen($numtel)!=8)
+											{
+												echo"Le champs Numéro Telephone doit étre obligatoirement de 8 caractéres";
+											}	
+									else
+											if(strlen($email)<6)
+											{
+												echo"Le champs Email doit étre au moins de 6 caractéres";
+											}	
+											
+											else
+											{
+												echo "<center> Inscription réussite </center> ";
+												$bdd->exec("INSERT into client  
+														VALUES ('$cin','$passe','$nomc','$prenc','$numtel','$email')");
+											}
+											
+		
+							}
+						}
+						
+						?>

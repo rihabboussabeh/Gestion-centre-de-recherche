@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5a91bf;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 30px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #2b506e;
+}
+
+
+</style>
+</head>
+<body style="background-color:#edf3f8">
+
+<?php 
+session_start();
+session_destroy(); ?>
+<div style="margin-top:2% ; margin-left:5%;margin-right:5%">
+<ul> <li><a  href="index.html">Home</a></li>
+  <li><a href="sujet.html">Sujets de recherche</a></li>
+<li><a href="event.html">Événements</a></li>
+<li><a href="">unité de recherche</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+</ul>
+<br> 
+  <img id="im"  src="labo.jpg"  />
+    
+   <table  ><tr> <td style=" width:70%">
+            <div style="  box-shadow: 4px 1px 4px black;
+    border: 1px dashed #555;
+    background: #c2d1f0;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;">
+                <h1></h1>
+                <br/>
+                <br/>
+                <form >
+            <label style=" font-size:90%;
+ color:#0B2161;
+  font-family: Helvetica, Arial, sans-serif;">   The laboratory on Development and Control of Distributed Applications (ReDCAD) was created in October 2005 at the Department of Computer Engineering and Applied Mathematics of the National School of Engineers of Sfax. The main activities carried on bythe members of this laboratory include:
+<br>
+   
+
+			   
+ &nbsp; &nbsp; &nbsp;-Scientific research,<br>
+  &nbsp; &nbsp; &nbsp;-Training and advising of young researchers, <br>
+  &nbsp; &nbsp; &nbsp;-Participation in the socio-economic life, <br>
+  &nbsp; &nbsp; &nbsp;-Contribution to national and international research projects,<br> 
+  &nbsp; &nbsp; &nbsp;-Organization of national and international scientific conferences and workshops. <br>
+ 
+ReDCAD is composed by 100 researchers:
+<br>
+&nbsp; &nbsp; &nbsp;-1 Full professor<br>
+&nbsp; &nbsp; &nbsp;-2 professors<br>
+&nbsp; &nbsp; &nbsp;-22 Associate professors<br>
+&nbsp; &nbsp; &nbsp;-21 Assistant professors<br>
+&nbsp; &nbsp; &nbsp;-50 PhD students<br>
+&nbsp; &nbsp; &nbsp;-6 Master students   </label>   
+                </form>
+            </div>
+        <br><br><br>
+        </div>
+		
+     
+ </td> &nbsp;&nbsp;&nbsp;&nbsp;
+  <td>
+			<div style=" background: #e6e6e6;
+    border: 1px solid #555;
+    padding: 8%;
+    margin-bottom: 50px;
+	margin-left:10%;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 4px 1px 4px black;
+	float:right">
+                <section id="cestquoi">
+                   			    <form   action="login2.php"     method="POST" >
+         
+               
+                   
+                     
+                    <h1 style="color:#5a91bf">Login<h1>
+                     
+                        <input style="background-color:#c7d7ef ;border: inset ;padding:3%;width:85%  "  type="text"  placeholder="Username " name="username" id="login"/> 
+              
+              
+                
+                
+                       
+                        <input   style="background-color:#c7d7ef ;border: inset ;padding:3%;width:85%;margin-top:5% "   type="password"   placeholder="Password" name="password" id="password" /> 
+               
+               <br>
+                   <br>
+               
+                    <input type="submit"  name="login"  style="background-color:#5a91bf;border: 1px outset;padding:3%; margin-left:65% ;color:#e6e6e6 "  value="login" > 
+               
+                      <a href="inscription.html"  style="color:#5a91bf;font-size:50%">Inscription </a>
+                
+                     
+                       </form>
+                 
+                </section>
+            </div>
+          <br><br><br>
+        </div>  </div>
+ 
+  </div>
+  
+  </td>
+     </tr>
+
+  
+  
+  
+   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <footer style="   width: 90%;
+    float: left;
+    text-align: center;
+    background: #5a91bf;
+    color: white;
+    padding: 30px ; margin-left:2% ;margin-bottom:2%">
+<table>
+<tr> <th style="font-size:130%">ReDCAD</th><th style="font-size:130%">Contact</th><th style="font-size:130%">Address</th></tr>
+<tr> <td>National School of Engineering of Sfax
+www.enis.rnu.tn
+
+University of Sfax, Tunisia
+www.uss.rnu.tn
+</td><td>Prof. Dr. Eng. Mohamed Jmaiel
+
+Research Center for Computer Science, Multimedia and Digital Data Processing of Sfax, Send an Email 
+Phone: +216 74 666 578</td><td>National School of Engineers of Sfax 
+Department of Computer Science and Applied Mathematics 
+ReDCAD Laboratory
+B.P. 1173, 3038 Sfax, Tunisia</td></tr>
+</table>
+</footer>
+</body>
+</html>
